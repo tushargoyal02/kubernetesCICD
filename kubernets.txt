@@ -1,0 +1,51 @@
+17/03/2019
+
+1 # use [id -u]  to check for the root user if 0 mean you are root user
+2 how to get files if ssh and scp is not working 
+
+3 use kubectl get pods -o wide | grep deployment_name
+
+4 kubectl get svc 	//to get info about service
+
+5 kubectl create service loadbalancer name_of_your_service  --tcp=80  //service is loadbalacer at port 80
+`	[not open in browser by default]
+
+6   By default service name is different but deployment name is same as app service by default
+
+7 service has selector which will talk to LABEL of pods
+
+8 kubectl edit deployment deploy_name
+
+9 kubectl edit svc tusharbaba  // go to this and add label name get by 8
+	to selector in yaml file as name in label of deployment [selector in last sections]
+
+
+10 To change the service :
+	go to as same as 9 and put in last line [type=NodePort ] rather loadbalancer
+
+-----------
+18/03/2019
+------------
+
+
+11 kubectl create deployment deploy_name --image=local_registry
+	[sudo snap install kubectl --classic] 	//for ubuntu
+
+12 kubectl describe deployments tusharbaba | grep -i image   //to see images
+
+
+13  [kubectl get deployments tusharbaba -o wide]
+		[kubectl set image deployment/tusharbaba nginx=192.168.10.160:5000/nginx:tusharv1 ]
+	checlk -- kubectl describe deployments tusharbaba | grep Image
+
+
+14 kubectl expose deployment tusharbaba --type=LoadBalancer --port=80
+	[tusharbaba is deployment name:]
+
+15 See service by -->  kubectl get svc
+	and look for port 
+
+16 curl http://masterIP:port_above
+
+	 curl http://masterIP:port_above/abc.html
+17 git pull		//to get all the chages made in directory of clone
