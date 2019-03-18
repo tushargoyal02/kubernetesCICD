@@ -49,3 +49,22 @@
 
 	 curl http://masterIP:port_above/abc.html
 17 git pull		//to get all the chages made in directory of clone
+
+18 CICD [trigger point ]  change from manual to Git event(push)
+
+-------------------------------	
+NOTE-->	Jenkins , hudson[autmation of pipeline started by this by ORACLE] , Teamcity , Spinkker
+	Spinkker with aws as better with CD
+	Jenkins is made in java
+--------------------------------------------------
+Requirment
+-	Need jdk 1.8  [java support neccessary]
+-	Go to offficial website and install jenkins
+-	systemctl start jenkins
+
+
+	All work will be in project
+	- Put name and first project on browser
+	- Description  
+		source code (none)
+		
