@@ -1,5 +1,6 @@
 17/03/2019
 
+
 1 # use [id -u]  to check for the root user if 0 mean you are root user
 2 how to get files if ssh and scp is not working 
 
@@ -67,4 +68,46 @@ Requirment
 	- Put name and first project on browser
 	- Description  
 		source code (none)
-		
+
+
+
+
+
+---------------------------
+25/03/2019
+---------------------------
+
+Every project is made with a workspace
+
+- /var/www/html is made owner and group as jenkins because by default user is jenkins by default.
+	
+- For S3 storage of any website
+	[SDK - Software Development kit]
+
+	IAM make user and allow role for s3 with programming and UI access.
+	create group
+	add policy s3 full access and create group
+	go to user
+	make user -> give both acees and add to group and create
+
+	use python boto3 
+
+
+- pip3 install awscli boto3
+
+aws s3 ls s3://     [will show error]
+aws configure
+	-> put access key
+	-> secret key
+	-> region [us-east-1]	//it myregion at that time
+	
+aws s3 mb s3://tusar		//mb to make bucket
+
+aws s3 rb s3://tushar		//rb to remove the bucket
+	
+
+- Copy the authancation and change the group and owner as jenkins in /var/lib/jenkins/.aws
+
+NOTE - aws s3 help  		// for help for the aws service documentation
+
+
